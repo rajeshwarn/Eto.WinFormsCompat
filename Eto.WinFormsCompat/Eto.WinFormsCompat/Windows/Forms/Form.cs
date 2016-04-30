@@ -4,7 +4,8 @@ using System;
 
 namespace System.Windows.Forms
 {
-	public class Form : Control
+	public class Form : Eto.Forms.Form
 	{
+
 	}
 }
