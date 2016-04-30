@@ -47,6 +47,21 @@ namespace System.Windows.Forms
 
         public SizeF AutoScaleDimensions { get; set; }
 
+        [EtoWinFormsCompatStubOnly]
+        public AutoScaleMode AutoScaleMode { get; set; }
+
+        [EtoWinFormsCompatStubOnly]
+        public bool AutoSize { get; set; }
+
+        public Point Location
+        {
+            get { return CompatConverter.EtoDrawingPointToSystemDrawingPoint(EtoControl.Location); }
+            set { Eto.Forms.PixelLayout.SetLocation(EtoControl, CompatConverter.SystemDrawingPointToEtoDrawingPoint(value)); }
+        }
+
+        [EtoWinFormsCompatStubOnly]
+        public string Name { get; set; }
+
         public System.Drawing.Size Size
         {
             get { return CompatConverter.EtoDrawingSizeToSystemDrawingSize(EtoControl.Size); }
@@ -54,11 +69,20 @@ namespace System.Windows.Forms
         }
 
         [EtoWinFormsCompatStubOnly]
-        public string Name { get; set; }
-
-        [EtoWinFormsCompatStubOnly]
-        public AutoScaleMode AutoScaleMode { get; set; }
+        public int TabIndex { get; set; }
 
         #endregion Public Properties
+
+        #region Public Constructors
+
+        protected Control()
+        {
+            if (!Application.IsInitialized)
+            {
+                Application.Initialize();
+            }
+        }
+
+        #endregion Public Constructors
     }
 }

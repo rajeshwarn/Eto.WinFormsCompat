@@ -39,6 +39,7 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompatUtils\CompatConverter.cs" />
@@ -53,8 +54,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Windows\Forms\Application.cs" />
     <Compile Include="Windows\Forms\AutoScaleMode.cs" />
+    <Compile Include="Windows\Forms\ContainerControl.cs" />
     <Compile Include="Windows\Forms\Control.cs" />
+    <Compile Include="Windows\Forms\ControlCollection.cs" />
     <Compile Include="Windows\Forms\Form.cs" />
+    <Compile Include="Windows\Forms\Label.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

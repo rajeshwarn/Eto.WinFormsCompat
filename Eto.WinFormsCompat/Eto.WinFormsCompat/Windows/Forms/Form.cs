@@ -5,7 +5,10 @@ using System.CompatUtils;
 
 namespace System.Windows.Forms
 {
-    public class Form : Control
+    /// <summary>
+    /// Represents a control that holds sub-controls on the Eto WinForms Compatibility Layer
+    /// </summary>
+    public class Form : ContainerControl
     {
         #region Private Fields
 
@@ -17,11 +20,7 @@ namespace System.Windows.Forms
 
         public Form()
         {
-            if (!Application.IsInitialized)
-            {
-                Application.Initialize();
-            }
-            EtoForm = new Eto.Forms.Form();
+            EtoForm = new Eto.Forms.Form {Content = EtoLayout};
             EtoControl = EtoForm;
         }
 
