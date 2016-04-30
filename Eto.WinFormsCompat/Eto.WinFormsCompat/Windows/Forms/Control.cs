@@ -1,5 +1,5 @@
 ﻿using System.CompatUtils;
-using Eto.Drawing;
+using System.Drawing;
 
 namespace System.Windows.Forms
 {
@@ -8,17 +8,22 @@ namespace System.Windows.Forms
     /// </summary>
     public abstract class Control
     {
-        private Eto.Drawing.Control
-        #region Public Methods 
+        #region Private Fields
+
+        public Eto.Forms.Control EtoControl { get; set; }
+
+        #endregion Private Fields
+
+        #region Public Methods
 
         [EtoWinFormsCompatStubOnly]
         public void PerformLayout()
         {
         }
 
-        public override void ResumeLayout()
+        public void ResumeLayout()
         {
-            base.ResumeLayout();
+            EtoControl.ResumeLayout();
         }
 
         public void ResumeLayout(bool none)
@@ -26,17 +31,33 @@ namespace System.Windows.Forms
             ResumeLayout();
         }
 
+        public void SuspendLayout()
+        {
+            EtoControl.SuspendLayout();
+        }
+
+        [EtoWinFormsCompatStubOnly]
+        protected virtual void Dispose(bool disposing)
+        {
+        }
+
         #endregion Public Methods
 
         #region Public Properties
 
-        public override Size Size { get; set; }
+        public SizeF AutoScaleDimensions { get; set; }
 
-        public override System.Drawing.Size ClientSize
+        public System.Drawing.Size Size
         {
-            get { return CompatConverter.SystemDrawingSizeToEtoDrawingSize(this.ClientSize); }
-            set { SetSize(value); }
+            get { return CompatConverter.EtoDrawingSizeToSystemDrawingSize(EtoControl.Size); }
+            set { EtoControl.Size = CompatConverter.SystemDrawingSizeToEtoDrawingSize(value); }
         }
+
+        [EtoWinFormsCompatStubOnly]
+        public string Name { get; set; }
+
+        [EtoWinFormsCompatStubOnly]
+        public AutoScaleMode AutoScaleMode { get; set; }
 
         #endregion Public Properties
     }
