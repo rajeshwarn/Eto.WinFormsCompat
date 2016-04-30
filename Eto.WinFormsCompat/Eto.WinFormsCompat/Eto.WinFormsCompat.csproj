@@ -32,6 +32,10 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Eto, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eto.Forms.2.2.0\lib\net45\Eto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -54,13 +58,14 @@
     <Compile Include="Drawing\SizeF.cs" />
     <Compile Include="EtoWinFormsCompatStubOnlyAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\Forms\Application.cs" />
+    <Compile Include="Windows\Forms\Control.cs" />
+    <Compile Include="Windows\Forms\ControlCollection.cs" />
     <Compile Include="Windows\Forms\Form.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="ComponentModel" />
-    <Folder Include="Drawing" />
-    <Folder Include="Windows" />
-    <Folder Include="Windows\Forms" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
