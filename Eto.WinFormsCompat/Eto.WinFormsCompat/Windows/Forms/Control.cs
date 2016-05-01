@@ -53,11 +53,10 @@ namespace System.Windows.Forms
         [EtoWinFormsCompatStubOnly]
         public bool AutoSize { get; set; }
 
-        public Point Location
-        {
-            get { return CompatConverter.EtoDrawingPointToSystemDrawingPoint(EtoControl.Location); }
-            set { Eto.Forms.PixelLayout.SetLocation(EtoControl, CompatConverter.SystemDrawingPointToEtoDrawingPoint(value)); }
-        }
+        [EtoWinFormsCompatStubOnly]
+        public bool UseVisualStyleBackColor { get; set; }
+
+        public Point Location { get; set; }
 
         [EtoWinFormsCompatStubOnly]
         public string Name { get; set; }
