@@ -15,6 +15,7 @@
         #region Public Properties
 
         public Eto.Forms.TextBox EtoTextBox { get; }
+
         public string Text
         {
             get { return EtoTextBox.Text; }
