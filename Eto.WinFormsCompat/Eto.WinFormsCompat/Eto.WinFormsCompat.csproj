@@ -60,6 +60,7 @@
     <Compile Include="Windows\Forms\ControlCollection.cs" />
     <Compile Include="Windows\Forms\Form.cs" />
     <Compile Include="Windows\Forms\Label.cs" />
+    <Compile Include="Windows\Forms\MessageBox.cs" />
     <Compile Include="Windows\Forms\TextBox.cs" />
   </ItemGroup>
   <ItemGroup />

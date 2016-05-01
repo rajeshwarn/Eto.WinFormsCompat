@@ -12,5 +12,10 @@ namespace WinFormsCompatDemo.Designer
         }
 
         #endregion Public Constructors
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("Hello, World!");
+        }
     }
 }
