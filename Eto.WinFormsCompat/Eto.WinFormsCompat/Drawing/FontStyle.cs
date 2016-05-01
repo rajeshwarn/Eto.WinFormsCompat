@@ -3,6 +3,7 @@
     public enum FontStyle
     {
         Bold,
-        Regular
+        Regular,
+        Italic
     }
 }

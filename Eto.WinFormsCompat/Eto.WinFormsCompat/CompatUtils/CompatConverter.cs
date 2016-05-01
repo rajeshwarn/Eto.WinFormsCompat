@@ -27,5 +27,28 @@ namespace System.CompatUtils
         {
             return new Eto.Drawing.Point(location.X, location.Y);
         }
+
+        public static Eto.Drawing.Font SystemDrawingFontToEtoFont(System.Drawing.Font wfFont)
+        {
+            return new Eto.Drawing.Font(wfFont.FontName, wfFont.FontSize, WFFontStyleToEtoFontStyle(wfFont.FontStyle));
+        }
+
+        private static Eto.Drawing.FontStyle WFFontStyleToEtoFontStyle(System.Drawing.FontStyle fontStyle)
+        {
+            switch (fontStyle)
+            {
+                case FontStyle.Bold:
+                    return Eto.Drawing.FontStyle.Bold;
+
+                case FontStyle.Regular:
+                    return Eto.Drawing.FontStyle.None;
+
+                case FontStyle.Italic:
+                    return Eto.Drawing.FontStyle.Italic;
+
+                default:
+                    return Eto.Drawing.FontStyle.None;
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace System.Windows.Forms
 {
-    public class TextBox : Control
+    public class TextBox : TextControl
     {
         #region Public Constructors
 
