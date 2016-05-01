@@ -2,7 +2,7 @@
 {
     public class TextBox : Control
     {
-        public Eto.Forms.TextBox EtoTextBox { get; }
+        #region Public Constructors
 
         public TextBox()
         {
@@ -10,10 +10,17 @@
             EtoControl = EtoTextBox;
         }
 
+        #endregion Public Constructors
+
+        #region Public Properties
+
+        public Eto.Forms.TextBox EtoTextBox { get; }
         public string Text
         {
             get { return EtoTextBox.Text; }
             set { EtoTextBox.Text = value; }
         }
+
+        #endregion Public Properties
     }
 }

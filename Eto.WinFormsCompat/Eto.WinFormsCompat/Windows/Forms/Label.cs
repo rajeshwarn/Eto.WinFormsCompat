@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace System.Windows.Forms
+﻿namespace System.Windows.Forms
 {
     public class Label : Control
     {
-        public Eto.Forms.Label EtoLabel { get; }
+        #region Public Constructors
 
         public Label()
         {
@@ -16,10 +10,17 @@ namespace System.Windows.Forms
             EtoControl = EtoLabel;
         }
 
+        #endregion Public Constructors
+
+        #region Public Properties
+
+        public Eto.Forms.Label EtoLabel { get; }
         public string Text
         {
             get { return EtoLabel.Text; }
             set { EtoLabel.Text = value; }
         }
+
+        #endregion Public Properties
     }
 }

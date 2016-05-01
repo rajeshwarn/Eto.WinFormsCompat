@@ -2,7 +2,7 @@
 {
     public class Button : Control
     {
-        public Eto.Forms.Button EtoButton { get; }
+        #region Public Constructors
 
         public Button()
         {
@@ -10,10 +10,17 @@
             EtoControl = EtoButton;
         }
 
+        #endregion Public Constructors
+
+        #region Public Properties
+
+        public Eto.Forms.Button EtoButton { get; }
         public string Text
         {
             get { return EtoButton.Text; }
             set { EtoButton.Text = value; }
         }
+
+        #endregion Public Properties
     }
 }
