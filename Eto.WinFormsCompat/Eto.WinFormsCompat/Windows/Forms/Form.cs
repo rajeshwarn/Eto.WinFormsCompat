@@ -20,7 +20,7 @@ namespace System.Windows.Forms
 
         public Form()
         {
-            EtoForm = new Eto.Forms.Form {Content = EtoLayout};
+            EtoForm = new Eto.Forms.Form { Content = EtoLayout };
             EtoControl = EtoForm;
         }
 

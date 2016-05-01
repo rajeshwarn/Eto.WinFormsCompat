@@ -28,6 +28,7 @@ namespace System.Windows.Forms
             get { return EtoLabel.Text; }
             set { EtoLabel.Text = value; }
         }
+
         #endregion Public Properties
     }
 }
