@@ -11,7 +11,6 @@ namespace System.Windows.Forms
         {
             EtoListBox = new Eto.Forms.ListBox();
             EtoControl = EtoListBox;
-            
         }
 
         [EtoWinFormsCompatStubOnly]
@@ -20,10 +19,6 @@ namespace System.Windows.Forms
         [EtoWinFormsCompatStubOnly]
         public int ItemHeight { get; set; }
 
-        public List<object> Items
-        {
-            get { return EtoListBox.DataStore.ToList(); }
-            set { EtoListBox.DataStore = value; }
-        }
+        public List<object> Items => EtoListBox.DataStore.ToList();
     }
 }
