@@ -49,6 +49,10 @@
     <Reference Include="Eto.Wpf">
       <HintPath>..\packages\Eto.Platform.Wpf.2.2.0\lib\net45\Eto.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Eto.XamMac, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eto.Platform.XamMac.2.2.0\lib\net45\Eto.XamMac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
