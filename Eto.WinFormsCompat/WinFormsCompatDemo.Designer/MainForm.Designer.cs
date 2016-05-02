@@ -2,10 +2,26 @@
 {
     partial class MainForm
     {
+        #region Private Fields
+
+        private System.Windows.Forms.Button button1;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.ListBox listBox1;
+
+        private System.Windows.Forms.TextBox textBox1;
+
+        private System.Windows.Forms.TextBox textBox2;
+
+        #endregion Private Fields
+
+        #region Protected Methods
 
         /// <summary>
         /// Clean up any resources being used.
@@ -19,6 +35,8 @@
             }
             base.Dispose(disposing);
         }
+
+        #endregion Protected Methods
 
         #region Windows Form Designer generated code
 
@@ -96,11 +114,5 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
