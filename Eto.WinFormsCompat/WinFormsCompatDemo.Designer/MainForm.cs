@@ -15,7 +15,7 @@ namespace WinFormsCompatDemo.Designer
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Hello, World!");
+            listBox1.Items.Add(textBox1.Text);
         }
     }
 }
